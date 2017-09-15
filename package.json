@@ -1,0 +1,26 @@
+{
+  "name": "real",
+  "version": "1.0.0",
+  "description": "real estate app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/souljem/re-app.git"
+  },
+  "keywords": [
+    "realestate"
+  ],
+  "author": "joe malone",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/souljem/re-app/issues"
+  },
+  "homepage": "https://github.com/souljem/re-app#readme",
+  "dependencies": {
+    "pg": "7.3.0"
+  }
+}
