@@ -1,11 +1,16 @@
-var http = require('http');
+ function tape ()
+
+ {
+ 	var http = require('http');
 
 http.createServer(function (req, res) {
 
 	res.writeHead(200, {"Content-Type": "text/plain"})
 	res.end("hello World\n")
 }).listen(process.env.PORT)
+}
 
+alert("tits");
 //FANTOM
 
 // var { Client } = require('pg');
