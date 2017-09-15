@@ -6,6 +6,7 @@
 http.createServer(function (req, res) {
 
 	res.writeHead(200, {"Content-Type": "text/plain"})
+	res.write()
 	res.end("hello World\n")
 }).listen(process.env.PORT)
 }
@@ -13,22 +14,22 @@ http.createServer(function (req, res) {
 alert("tits");
 //FANTOM
 
-// var { Client } = require('pg');
+var { Client } = require('pg');
 
-// var client = new Client({
-//   connectionString: process.env.DATABASE_URL,
-//   ssl: true,
-// });
+var client = new Client({
+  connectionString: process.env.DATABASE_URL,
+  ssl: true,
+});
 
-// client.connect();
+client.connect();
 
-// client.query('SELECT table_schema,table_name FROM information_schema.tables;', (err, res) => {
-//   if (err) throw err;
-//   for (let row of res.rows) {
-//     console.log(JSON.stringify(row));
-//   }
-//   client.end();
-// });
+client.query('CREATE TABLE customers (name VARCHAR(255), address VARCHAR(255))";', (err, res) => {
+  if (err) throw err;
+  for (let row of res.rows) {
+    console.log(JSON.stringify(row));
+  }
+  client.end();
+});
 
 
 
