@@ -3,8 +3,31 @@
 <head>
 <link rel="stylesheet" type="text/css" href="real.css">
 <script src="index.js"></script>
+<script type="text/javascript">tape()</script>
+
+<script type="text/javascript">
 
 
+const { Client } = require('pg');
+
+const client = new Client({
+  connectionString: process.env.DATABASE_URL,
+  ssl: true,
+});
+
+client.connect();
+
+client.query('SELECT table_schema,table_name FROM information_schema.tables;', (err, res) => {
+  if (err) throw err;
+  for (let row of res.rows) {
+    console.log(JSON.stringify(row));
+  }
+  client.end();
+});</script>
+
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function() { tape() });
+</script>
 </head>
 <body>
   <H1>This is GOING to be the app of all apps</H1>
